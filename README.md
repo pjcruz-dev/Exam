@@ -11,5 +11,5 @@
 	DB_PASSWORD=
 
 4. Run php artisan key:generate
-6. Run php artisan migrate
-7. Run php artisan serve
+5. Run php artisan migrate
+6. Run php artisan serve
