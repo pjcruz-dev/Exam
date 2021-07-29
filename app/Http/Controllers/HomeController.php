@@ -15,6 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         $contacts = Contact::all();
+        $contacts = Contact::Paginate(5);
         return view('home', ['contacts' => $contacts]);
     }
 }

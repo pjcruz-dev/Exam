@@ -47,11 +47,11 @@
                               <a data-target="#addToFavoriteModal{{ $contact->id }}" data-toggle="modal" class="btn btn-sm btn-primary">Add to Favorite</a>
                               <a data-target="#deleteModal{{ $contact->id }}" data-toggle="modal" class="btn btn-sm btn-danger">Delete</a>
                               </td>
-                              <div class="modal fade" id="addToFavoriteModal{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal fade" id="addToFavoriteModal{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalCenterTitle">Add to Favorites</h5>
+                                      <h5 class="modal-title" id="">Add to Favorites</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                       </button>
@@ -90,6 +90,9 @@
                          @endforeach
                          </tbody>
                     </table>
+                    <div class="d-flex justify-content-left">
+                       {!! $contacts->links() !!}
+                    </div>
                 </div>
             </div>
         </div>

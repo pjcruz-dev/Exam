@@ -23,20 +23,40 @@
                     <form method="POST" action="{{ route('store') }}">
                       @csrf
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Name</label>
-                          <input type="text" class="form-control" name="name">
+                          <label for="">Name</label>
+                          <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                          @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" name="email">
+                          <label for="">Email address</label>
+                          <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                          @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Mobile number</label>
-                          <input type="text" class="form-control" name="mobile_number">
+                          <label for="">Mobile number</label>
+                          <input type="number" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required autocomplete="mobile_number" autofocus>
+                          @error('mobile_number')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Telephone Number</label>
-                          <input type="text" class="form-control" name="telnumber">
+                          <label for="">Telephone Number</label>
+                          <input type="number" class="form-control @error('telnumber') is-invalid @enderror" name="telnumber" value="{{ old('telnumber') }}" required autocomplete="telnumber" autofocus>
+                          @error('telnumber')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
